@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-surface-light text-ink-light dark:bg-surface-dark dark:text-ink-dark transition-colors duration-500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(79, 70, 229, 0.22);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 70, 229, 0.55);
+}
+
+:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #4F46E5, #8B7CF8 55%, #4F46E5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-white/[0.04] backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08];
+}
+
+.section-pad {
+  @apply px-6 sm:px-10 lg:px-16 xl:px-24;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
+}
+
+.card {
+  @apply glass rounded-2xl shadow-soft transition-all duration-300;
+}
+
+.card:hover {
+  @apply shadow-soft-lg;
+  transform: translateY(-4px);
+}
+
+.eyebrow {
+  @apply mono text-xs tracking-[0.2em] uppercase text-primary-500 font-medium;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-primary-500 text-white px-6 py-3 text-sm font-semibold shadow-glow hover:bg-primary-600 transition-all duration-300 hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/15 px-6 py-3 text-sm font-semibold hover:border-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-all duration-300 hover:-translate-y-0.5;
+}
+
+.chip {
+  @apply mono text-[11px] tracking-wide uppercase px-2.5 py-1 rounded-full bg-primary-50 text-primary-700 dark:bg-primary-500/10 dark:text-primary-300 border border-primary-100 dark:border-primary-500/20;
+}
