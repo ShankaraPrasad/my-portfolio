@@ -13,7 +13,7 @@ export const profile = {
   phone: '+91 6309506884',
   github: 'https://github.com/ShankaraPrasad',
   linkedin: 'https://www.linkedin.com/in/shankara-prasad-gudem-81b2a437b',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: 'https://drive.google.com/file/d/1k4MkdDphYQAJTE2PL2CbeR3WSi_ImKb7/view?usp=sharing',
   location: 'Hyderabad, India',
 }
 
